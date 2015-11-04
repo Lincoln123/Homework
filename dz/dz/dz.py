@@ -10,16 +10,20 @@ else:
         if m%1==0:
             print('False, Composite number')
             break
-    else: #я думаю надо эту часть сдвинуть но куда пока не понял
-        j=int(1)
-        q=int(1)
-        while j >= 1:
-               while int(q)>=j+1:
-                    (n**j)%q!=1
-                    r=q
-                    print (r)
-                    break
-
+        else: #я думаю надо эту часть сдвинуть но куда пока не понял
+            j=1
+            q=1
+            while j >= 1:
+                while q>=j+1:
+                    q+=1
+                    if (n**j)%q!=1:
+                        r=q
+                        #print (r)
+                    else: 
+                        q+=1
+                    j+=1
+                    print (r)   
+                break
             
 
         #break
