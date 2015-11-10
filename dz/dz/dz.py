@@ -10,22 +10,36 @@ else:
         if m%1==0:
             print('False, Composite number')
             break
-        else: #я думаю надо эту часть сдвинуть но куда пока не понял
+        else: 
             j=1
-            q=1
+            q=2
             while j >= 1:
-                while q>=j+1:
-                    q+=1
+                while q>=j:
                     if (n**j)%q!=1:
+
                         r=q
-                        #print (r)
+                        print (r)
+                        break
                     else: 
                         q+=1
-                    j+=1
-                    print (r)   
                 break
+                j+=1
+                
+            print ('azaza')  #сюда поставить что с р дальше
             
+            #while a<=r:
+             #   a+=1
+            for a in range(r,1,-1):
 
+                  
+                while a!=0:
+                    a,n=n%a,a
+                    p=n #переменная вывода  
+                    #print (p)
+            print (p)      
+            break
+            if p!=1:
+                print('False, Composite number')
         #break
     #print('False, Composite number')
 
