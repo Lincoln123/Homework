@@ -38,15 +38,15 @@ else:
                     #print (p)
             
             print ('nod',p)      
-           
+            #break
             if p!=1:
                 print('False, Composite number')
-            else:
-                print('Prime')
+            #else:
+                #print('Prime')
                
-            break
+            
            # for p in range(1,2*sqrt(r)*log2(n)):
-            for p in range(1,sqrt(r)*log2(n)):
+            for p in range(1,int(2*math.sqrt(r)*math.log2(n))):
                 if (pow((x+p),n)-(pow(x,n)+p))%n==0 and (pow(x,r)-1)%n==0:
                     print ('False, composite number')
                 else:
