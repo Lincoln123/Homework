@@ -13,12 +13,12 @@ else:
         else: 
             j=1
             q=2
-            while j >= 1:
+            while j <=4*pow(math.log2(n),2):
                 while q>=j:
                     if (n**j)%q!=1:
 
                         r=q
-                        print (r)
+                        print ('r=',r)
                         break
                     else: 
                         q+=1
@@ -36,11 +36,22 @@ else:
                     a,n=n%a,a
                     p=n #переменная вывода  
                     #print (p)
-            print (p)      
-            break
+            
+            print ('nod',p)      
+           
             if p!=1:
                 print('False, Composite number')
-        #break
+            else:
+                print('Prime')
+               
+            break
+           # for p in range(1,2*sqrt(r)*log2(n)):
+            for p in range(1,sqrt(r)*log2(n)):
+                if (pow((x+p),n)-(pow(x,n)+p))%n==0 and (pow(x,r)-1)%n==0:
+                    print ('False, composite number')
+                else:
+                    print('Prime')
+
     #print('False, Composite number')
 
         
