@@ -34,25 +34,22 @@ else:
              #   a+=1
             
             
-            for a in range(2,r):
-                
-                
-                while a!=0:
-                    
+            for a in range(r,1,-1):
+                 while a!=0 and a!=n:
 
-                   # print ('n=',n, 'a=',a)
+                    print ('n=',n, 'a=',a)
                     
                     a,n=n%a,a
                     p=n
                      #переменная вывода  
-                break         
-                        #print (p)
-                       
+                 break         
+                       #print (p)
+            p=n         
             print ('nod',p)      
             #break
             if p!=1:
                 print('False, Composite number')
-            break
+            #break
             #else:
                 #print('Prime')
                
@@ -71,7 +68,7 @@ else:
                     
                 break
                 x+=1
-            break
+            #break
     #print('False, Composite number')
 
         
