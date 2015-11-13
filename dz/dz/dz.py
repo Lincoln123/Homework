@@ -35,40 +35,45 @@ else:
             
             
             for a in range(r,1,-1):
-                 while a!=0 and a!=n:
+                z=n
+                while a!=0 and a!=z:
 
-                    print ('n=',n, 'a=',a)
+                    print ('z=',z, 'a=',a)
                     
-                    a,n=n%a,a
-                    p=n
+                    a,z=z%a,a
+                    p=z
                      #переменная вывода  
-                 break         
+                break         
                        #print (p)
-            p=n         
+            #p=n         
             print ('nod',p)      
             #break
             if p!=1:
                 print('False, Composite number')
-            #break
+            
             #else:
                 #print('Prime')
                
             
            # for p in range(1,2*sqrt(r)*log2(n)):
             
-
-            for p in range(1,int(2*math.sqrt(r)*math.log2(n))):
-                x=1
-                while x >=1:
-                    if (pow((x+p),n)-(pow(x,n)+p))%n==0 and (pow(x,r)-1)%n==0:
+            print (r ,n)
+            
+            for k in range(1,int(2*math.sqrt(r)*math.log2(n))):
+                x=0
+                while x >=0:
+                    x+=1
+                    print (x)
+                    if (pow((x+k),n)-(pow(x,n)+k))%n!=0 and (pow(x,r)-1)%n!=0:
                         print ('False, composite number')
+                        continue
                     else:
                         print('Prime')  
-                    
+                        break
                     
                 break
-                x+=1
-            #break
+                
+            break
     #print('False, Composite number')
 
         
