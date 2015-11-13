@@ -33,24 +33,36 @@ else:
             #while a<=r:
              #   a+=1
             
-            
-            for a in range(r,1,-1):
-                z=n
-                while a!=0 and a!=z:
-
-                    print ('z=',z, 'a=',a)
+            if r >= n:
+                r = n-1
+                for a in range(r,0,-1):
+                    z=n
+                    print (a)
+                    if z%a==0:
+                        #p=a
+                        break        
+            else:
+                for a in range(r,0,-1):
+                    z=n
                     
-                    a,z=z%a,a
-                    p=z
+                    if z%a==0:
+                        break
+            p=a
+           
+                    
+                   # print ('z=',z, 'a=',a)
+                    
+                    #a,z=z%a,a
+                    
                      #переменная вывода  
-                break         
+                #break         
                        #print (p)
             #p=n         
             print ('nod',p)      
             #break
             if p!=1:
                 print('False, Composite number')
-            
+                break
             #else:
                 #print('Prime')
                
@@ -60,18 +72,19 @@ else:
             print (r ,n)
             
             for k in range(1,int(2*math.sqrt(r)*math.log2(n))):
-                x=0
-                while x >=0:
-                    x+=1
-                    print (x)
-                    if (pow((x+k),n)-(pow(x,n)+k))%n!=0 and (pow(x,r)-1)%n!=0:
-                        print ('False, composite number')
-                        continue
-                    else:
-                        print('Prime')  
-                        break
+                x=1
+                #while x >=0:
+                 #   x+=1
+                  #  print (x)
+                if (pow((x+k),n)-(pow(x,n)+k))%n!=0 and (pow(x,r)-1)%n!=0:
+
+                    print ('False, composite number')
+                    continue
+                else:
+                    print('Prime')  
+                    break
                     
-                break
+                #break
                 
             break
     #print('False, Composite number')
