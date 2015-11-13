@@ -1,8 +1,12 @@
 ﻿#f = open('data.txt','r')
 import math
 n = int(input("Enter the figure "))
-if (n<=1): 
+if n<1: 
     print('False')
+elif n==1:
+    print('False, Composite number')
+elif n==2:
+    print('Prime number')
 else:
     
     for s in range(2,n):
