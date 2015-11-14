@@ -1,18 +1,32 @@
-﻿#f = open('data.txt','r')
-import math
-n = int(input("Enter the figure "))
-if n<1: 
-    print('False')
+﻿import math
+
+def BadOutput():
+        f = open('1.txt', 'w')
+        f.writelines('False, Composite number')
+        f.close()
+def GoodOutput():
+    f = open('1.txt', 'w')
+    f.writelines('Prime number')
+    f.close()
+
+f = open('data.txt','r')
+n = int(f.read())
+#n = int(input("Enter the figure "))
+if n < 1: 
+     print('False')
 elif n==1:
-    print('False, Composite number')
+    Output()
+    #print('False, Composite number')
 elif n==2:
-    print('Prime number')
+    #print('Prime number')
+    GoodOutput()
 else:
     
     for s in range(2,n):
         m = (math.log(n,s))
         if m%1==0:
-            print('False, Composite number')
+            #print('False, Composite number')
+            BadOutput()
             break
         else: 
             q=int(4*pow(math.log2(n),2)+1)
@@ -65,7 +79,8 @@ else:
             print ('nod',p)      
             #break
             if p!=1:
-                print('False, Composite number')
+                #print('False, Composite number')
+                BadOutput()
                 break
             #else:
                 #print('Prime')
@@ -82,10 +97,12 @@ else:
                   #  print (x)
                 if (pow((x+k),n)-(pow(x,n)+k))%n!=0 and (pow(x,r)-1)%n!=0:
 
-                    print ('False, composite number')
+                    #print ('False, composite number')
+                    BadOutput()
                     continue
                 else:
-                    print('Prime')  
+                    #print('Prime')  
+                    GoodOutput()
                     break
                     
                 #break
