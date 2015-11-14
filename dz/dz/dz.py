@@ -1,21 +1,25 @@
 ﻿import math
 
 def BadOutput():
-        f = open('1.txt', 'w')
-        f.writelines('False, Composite number')
+        f = open('data.txt', 'a')
+        f.writelines('\nFalse, Composite number')
         f.close()
 def GoodOutput():
-    f = open('1.txt', 'w')
-    f.writelines('Prime number')
+    f = open('data.txt', 'a')
+    f.writelines('\nPrime number')
     f.close()
-
+def FOutput():
+    f = open('data.txt', 'a')
+    f.writelines('\nFalse, input is incorrect')
+    f.close()
 f = open('data.txt','r')
 n = int(f.read())
 #n = int(input("Enter the figure "))
 if n < 1: 
-     print('False')
+     #print('False, input is incorrect')
+     FOutput()
 elif n==1:
-    Output()
+    BadOutput()
     #print('False, Composite number')
 elif n==2:
     #print('Prime number')
