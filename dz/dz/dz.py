@@ -1,36 +1,29 @@
 ﻿import math
-
-def BadOutput():
-        f = open('data.txt', 'a')
-        f.writelines('\nFalse, Composite number')
-        f.close()
-def GoodOutput():
-    f = open('data.txt', 'a')
-    f.writelines('\nPrime number')
+import sys
+fil = sys.argv[1]
+def Output(text):
+    f = open(fil, 'a')
+    f.writelines(text)
     f.close()
-def FOutput():
-    f = open('data.txt', 'a')
-    f.writelines('\nFalse, input is incorrect')
-    f.close()
-f = open('data.txt','r')
+f = open(fil,'r')
 n = int(f.read())
 #n = int(input("Enter the figure "))
 if n < 1: 
      #print('False, input is incorrect')
-     FOutput()
+     Output('/nFalse, input is incorrect')
 elif n==1:
-    BadOutput()
+    Output('/nFalse, Composite number')
     #print('False, Composite number')
 elif n==2:
     #print('Prime number')
-    GoodOutput()
+    Output('/nPrime')
 else:
     
     for s in range(2,n):
         m = (math.log(n,s))
         if m%1==0:
             #print('False, Composite number')
-            BadOutput()
+            Output('/nFalse, Composite number')
             break
         else: 
             q=int(4*pow(math.log2(n),2)+1)
@@ -84,7 +77,7 @@ else:
             #break
             if p!=1:
                 #print('False, Composite number')
-                BadOutput()
+                Output('/nFalse, Composite number')
                 break
             #else:
                 #print('Prime')
@@ -102,11 +95,11 @@ else:
                 if (pow((x+k),n)-(pow(x,n)+k))%n!=0 and (pow(x,r)-1)%n!=0:
 
                     #print ('False, composite number')
-                    BadOutput()
+                    Output('/nFalse, Composite number')
                     continue
                 else:
                     #print('Prime')  
-                    GoodOutput()
+                    Output('/nPrime')
                     break
                     
                 #break
