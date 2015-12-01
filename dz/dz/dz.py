@@ -69,14 +69,14 @@ else :
                 break
                         
             for k in range(1,int(2*math.sqrt(r)*math.log2(n))) : #переменная для счетчика из т.Ферма
-                x = 1
-                if (pow(( x + k ),n) - (pow(x,n) + k)) % n != 0 and (pow(x,r) - 1) % n != 0 :
+                for x in range (1,2147483647):
+                    if (pow(( x + k ),n) - (pow(x,n) + k)) % n != 0 and (pow(x,r) - 1) % n != 0 :
 
                     #print ('False, composite number')
-                    Output('\nFalse, Composite number')
-                    continue
-                else :
-                    #print('Prime')  
-                    Output('\nPrime')
-                    break
-            break
+                        Output('\nFalse, Composite number')
+                        continue
+                    else :
+                        #print('Prime')  
+                        Output('\nPrime')
+                        break
+                break
