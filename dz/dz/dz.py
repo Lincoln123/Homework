@@ -69,7 +69,7 @@ else :
                 break
                         
             for k in range(1,int(2*math.sqrt(r)*math.log2(n))) : #переменная для счетчика из т.Ферма
-                for x in range (1,2147483647):
+                for x in range (-2147483647,2147483647):
                     if (pow(( x + k ),n) - (pow(x,n) + k)) % n != 0 and (pow(x,r) - 1) % n != 0 :
 
                     #print ('False, composite number')
