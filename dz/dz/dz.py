@@ -2,19 +2,28 @@
 import sys
 
 def Main():  
-    fil = sys.argv[1]
-    f = open(fil, 'r')
-    n = int(f.read()) #переменная входного числа
-    q = int(4 * pow(math.log2(n),2) + 1)    
-    
-    check_input(n)
-    PerfectPower(n)
-    Individual_r(n,q)
+
+    if len(sys.argv) != 3:
+        print ('Invalid number of input arguments')
+    else:
+        try:
+            fil = sys.argv[1]
+            f = open(fil, 'r')
+        except:
+            print ('File not found')
+        else:
+            
+            fil = sys.argv[1]
+            f = open(fil, 'r')
+            n = int(f.read()) #переменная входного числа
+            q = int(4 * pow(math.log2(n),2) + 1)  
+              
+            check_input(n)
+            PerfectPower(n)
+            Individual_r(n,q)
 
 def check_input(n):
-    if len(sys.argv) != 3:
-        Output('\nWrong number of arguments')
-    
+
     if n < 1 : 
         Output('\nFalse, input is incorrect')
    
@@ -80,4 +89,4 @@ def FermaTest(n,r):
         else :
             Output('\nPrime')
                                     
-Main()            
+Main()
