@@ -2,6 +2,7 @@
 import sys
 
 def Main():  
+    fil = sys.argv[1]
     f = open(fil, 'r')
     n = int(f.read()) #переменная входного числа
     q = int(4 * pow(math.log2(n),2) + 1)    
@@ -13,8 +14,6 @@ def Main():
 def check_input(n):
     if len(sys.argv) != 3:
         Output('\nWrong number of arguments')
-    
-    fil = sys.argv[1]
     
     if n < 1 : 
         Output('\nFalse, input is incorrect')
