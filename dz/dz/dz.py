@@ -1,6 +1,8 @@
 ﻿import math
 import sys
-
+#used literature http://teal.gmu.edu/courses/ECE746/project/F06_Project_resources/Salembier_Southerington_AKS.pdf
+#http://dha.spb.ru/PDF/AKS.pdf
+#https://en.wikipedia.org/wiki/AKS_primality_test
 def Main():  
 
     if len(sys.argv) != 3:
